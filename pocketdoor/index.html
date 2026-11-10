@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pocket Door - your phone, on your PC</title>
+<meta name="description" content="Pocket Door links your Android phone to your Windows PC over your own Wi-Fi: notifications you can answer, copied text both ways, photos and files.">
+<style>
+  :root {
+    --bg: #f7f7f7; --card: #ffffff; --text: #474747; --strong: #111111; --muted: #666666; --line: #dadada;
+    --accent: #0e7c66; --tint: rgba(14,124,102,.10); --door: #fad02e;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #1c1c1c; --card: #222222; --text: #b0b0b0; --strong: #f2f2f2; --muted: #8c8c8c; --line: #343434; --accent: #3fc1a3; --tint: rgba(63,193,163,.15); }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font: 16px/1.6 "Segoe UI", system-ui, -apple-system, Roboto, sans-serif; padding: 48px 16px 56px; }
+  main { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px; }
+  header { display: flex; flex-direction: column; gap: 14px; }
+  .logo { position: relative; width: 60px; height: 60px; border-radius: 16px; background: #0e7c66; }
+  .logo span { position: absolute; left: 19px; top: 11px; width: 22px; height: 38px; border: 2.5px solid #fff; border-radius: 4px; background: #0a5c4c; overflow: hidden; }
+  .logo span::after { content: ""; position: absolute; inset: 0; background: var(--door); animation: open .9s cubic-bezier(.2,0,0,1) .3s both; }
+  @keyframes open { from { transform: translateX(0); } to { transform: translateX(68%); } }
+  @media (prefers-reduced-motion: reduce) { .logo span::after { animation: none; transform: translateX(68%); } }
+  h1 { color: var(--strong); font-size: 2.2rem; line-height: 1.15; }
+  .lead { font-size: 1.1rem; max-width: 560px; }
+  h2 { color: var(--strong); font-size: 1.2rem; margin-bottom: 14px; }
+  .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 18px; }
+  .card h3 { color: var(--strong); font-size: 1rem; margin: 10px 0 4px; }
+  .icon { width: 36px; height: 36px; border-radius: 8px; background: var(--tint); color: var(--accent); display: flex; align-items: center; justify-content: center; }
+  .get { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+  .get .card { display: flex; flex-direction: column; gap: 4px; }
+  .get strong { color: var(--strong); }
+  .soon { color: var(--muted); font-size: .95rem; }
+  a { color: var(--accent); }
+  footer { color: var(--muted); font-size: .9rem; border-top: 1px solid var(--line); padding-top: 18px; }
+  @media (max-width: 560px) { body { padding-top: 32px; } h1 { font-size: 1.8rem; } }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="logo" aria-hidden="true"><span></span></div>
+    <h1>Your phone, on your PC</h1>
+    <p class="lead">Pocket Door links your Android phone to your Windows PC. Notifications, copied text, photos and files
+    move between them over your own Wi-Fi. Nothing goes through anyone else's servers.</p>
+  </header>
+
+  <section aria-labelledby="what">
+    <h2 id="what">What it does</h2>
+    <div class="features">
+      <div class="card">
+        <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M6 16v-5a6 6 0 0 1 12 0v5l1.5 2h-15L6 16ZM10 20.5a2 2 0 0 0 4 0"/></svg></div>
+        <h3>Notifications you can answer</h3>
+        <p>Reply and use their buttons without picking up your phone.</p>
+      </div>
+      <div class="card">
+        <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M9 9h10v11H9zM5 15V4h10"/></svg></div>
+        <h3>Copy there, paste here</h3>
+        <p>Copied text crosses over, both ways.</p>
+      </div>
+      <div class="card">
+        <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v14H4zM4 16l4.5-4.5 4 4 3-3L20 17M9 9.5h.01"/></svg></div>
+        <h3>Photos and files</h3>
+        <p>Your latest photos by the clock. Drag files to send them.</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="get-title" id="get">
+    <h2 id="get-title">Get Pocket Door</h2>
+    <div class="get">
+      <div class="card"><strong>For Windows</strong><span class="soon">Coming to the Microsoft Store.</span></div>
+      <div class="card"><strong>For Android</strong><span class="soon">Coming to Google Play.</span></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Pocket Door has no accounts and no servers of its own: your phone and your PC talk only to each other.
+    <a href="https://arvindmaiya.github.io/pocketdoor-site/">Privacy policy</a></p>
+  </footer>
+</main>
+</body>
+</html>
