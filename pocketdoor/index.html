@@ -96,6 +96,8 @@
   footer { border-top: 1px solid var(--line); color: var(--muted); font-size: .95rem; }
   footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; padding-top: 24px; padding-bottom: 40px; }
   footer span { margin-right: auto; }
+  footer .slint { display: inline-flex; }
+  footer .slint img { display: block; }
 
   @media (max-width: 860px) {
     .hero { padding-top: 48px; padding-bottom: 48px; }
@@ -251,6 +253,10 @@
     <span>Pocket Door, for Windows and Android 10 or later</span>
     <a href="https://github.com/arvindmaiya/pocketdoor-releases/releases">All releases</a>
     <a href="https://arvindmaiya.github.io/pocketdoor-site/">Privacy policy</a>
+    <a class="slint" href="https://slint.dev" aria-label="Made with Slint"><picture>
+      <source srcset="assets/made-with-slint-dark.svg" media="(prefers-color-scheme: dark)">
+      <img src="assets/made-with-slint-light.svg" alt="Made with Slint" height="28" width="61">
+    </picture></a>
   </div>
 </footer>
 
