@@ -1,12 +1,9 @@
 # arvindmaiya.github.io
 
-- `pocketdoor/`: Pocket Door's home page.
-- `pocketdoor/link/`: where the code on Pocket Door's PC app points. With Pocket Door on the phone, Android opens the
-  app straight from the code and this page never shows; without it, the page sends the phone on to get it. The code's
-  fields come after `#`, so they never reach this site. The address is permanent: every Pocket Door PC app puts it in
-  its codes.
-- `.well-known/assetlinks.json`: tells Android that Pocket Door (`com.pocketdoor`) may open those links. It lists the
-  fingerprint of every key the app is signed with. Today: this PC's debug key only. Add the Pocket Door
-  upload key once it exists, and Google Play's signing key once the app is in Play Console (Play Console › Test and
-  release › App integrity shows it).
+Pocket Door's site moved to https://pocketdoor.github.io (repo `pocketdoor/pocketdoor.github.io`) on 14 Nov 2026.
+What's left here must stay:
+- `pocketdoor/` and `pocketdoor/link/`: redirects to the new site. PC apps from before the move put
+  `arvindmaiya.github.io/pocketdoor/link#…` in their pairing codes; the link page hands the code (after `#`) on.
+- `.well-known/assetlinks.json`: lets Android open those old codes in Pocket Door (`com.pocketdoor`). Keep it in step
+  with the copy on the new site; it lists the fingerprint of every key the app is signed with.
 - `.nojekyll`: so GitHub Pages serves the `.well-known` folder.
